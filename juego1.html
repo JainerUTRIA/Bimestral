@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Canvas Básico</title>
         <style>
-            #canvas1
+            #miCanvas
             {
                 border:dotted 3px yellow;
                 background: green;
@@ -13,13 +13,25 @@
         <script>
             window.onload = function()
             {
-                var canvas = document.getElementById("canvas1");
+                var canvas = document.getElementById("miCanvas");
                 if(canvas && canvas.getContext)
                 {
                     var ctx = canvas.getContext("2d");
                     if(ctx)
                     {
-                        alert("Bienvenido a CANVAS");
+                        //Definición de colores
+                        ctx.fillStyle = "yellow";
+                        ctx.strokeStyle = "#ff0000";
+                        ctx.lineWidth = 5;
+
+                        //Rectángulos
+                        ctx.fillRect(50, 50, 100, 100);
+                        ctx.strokeRect(50,50,100,100);
+
+                        //Otro cuadro
+                        ctx.fillStyle = "rgba(250, 0, 0, 0.3)";
+                        ctx.fillRect(200, 50, 100, 100);
+                        ctx.strokeRect(200,50,100,100);
                     }
                     else
                     {
