@@ -14,3 +14,6 @@
 ![](img/captura4.png)
 
 ![](img/cap5.png)
+
+
+![](img/cap6.png)
