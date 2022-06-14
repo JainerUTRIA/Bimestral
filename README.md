@@ -17,3 +17,6 @@
 
 
 ![](img/cap6.png)
+
+
+![](img/cap7.png)
