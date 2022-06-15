@@ -25,3 +25,6 @@
 
 
 ![](img/cap9.png)
+
+![](img/Captura%20de%20pantalla%20de%202022-06-15%2016-13-19.png)
+
