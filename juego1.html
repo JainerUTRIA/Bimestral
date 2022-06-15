@@ -19,9 +19,8 @@
                     var ctx = canvas.getContext("2d");
                     if(ctx)
                     {
-                        var h = canvas.height;
-                        var w = canvas.width;
-                        var gradiente = ctx.createLinearGradient(0,0,w/2,0);
+
+                        var gradiente = ctx.createRadialGradient(canvas.width/2,canvas.height,10,canvas.width/2,0,100);
                         gradiente.addColorStop(0, "pink");
                         gradiente.addColorStop(0.15, "yellow");
                         gradiente.addColorStop(0.35, "white");
@@ -29,10 +28,10 @@
                         gradiente.addColorStop(1, "red");
 
                         ctx.fillStyle = gradiente;
-                        ctx.fillRect(0,0,w/2,h/2);
+                        ctx.fillRect(0,0,canvas.width, canvas.height);
 
-                        //Gradiente vertical
-                        gradiente = ctx.createLinearGradient(0,0,0,h/2);
+                        var gradiente = ctx.createRadialGradient(canvas.width/2,canvas.height/2,10,canvas.width/2,canvas.height/2,300);
+
                         gradiente.addColorStop(0, "pink");
                         gradiente.addColorStop(0.15, "yellow");
                         gradiente.addColorStop(0.35, "white");
@@ -40,27 +39,9 @@
                         gradiente.addColorStop(1, "red");
 
                         ctx.fillStyle = gradiente;
-                        ctx.fillRect(w/2,0,w/2,h/2);
+                        ctx.fillRect(0,0,canvas.width, canvas.height);
 
-                        //Diagonal 1
-                        gradiente = ctx.createLinearGradient(0,h/2,w/2,h);
-                        gradiente.addColorStop(0, "pink");
-                        gradiente.addColorStop(0.15, "yellow");
-                        gradiente.addColorStop(0.35, "white");
-                        gradiente.addColorStop(0.65, "yellow");
-                        gradiente.addColorStop(1, "red");
-
-                        ctx.fillStyle = gradiente;
-                        ctx.fillRect(0,h/2,w/2,h);
-                        //Diagonal 2
-                        gradiente = ctx.createLinearGradient(w/2,h,w,h/2);
-                        gradiente.addColorStop(0, "pink");
-                        gradiente.addColorStop(0.15, "yellow");
-                        gradiente.addColorStop(0.35, "white");
-                        gradiente.addColorStop(0.65, "yellow");
-                        gradiente.addColorStop(1, "red");
-                        ctx.fillStyle = gradiente;
-                        ctx.fillRect(w/2,h/2,w,h);
+                        
 
 
 
