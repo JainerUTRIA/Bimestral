@@ -42,3 +42,5 @@
 ![](img/cap16.png)
 
 ![](img/basico.png)
+
+![](img/principiosanim.png)
