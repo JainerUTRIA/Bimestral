@@ -19,28 +19,17 @@
                     var ctx = canvas.getContext("2d");
                     if(ctx)
                     {
-
-                       //Variables
-                       var bola = new Image();
-                       //Funciones
-                       function muestraPatron(repite)
-                       {
-                           ctx.font = "7em Verdana";
-                           ctx.lineWidth = 1.0;
-                           ctx.fillStyle = "blue";
-                           ctx.strokeStyle = "yellow";
-                           //
-                           var patron = ctx.createPattern(bola, repite);
-                           ctx.clearRect(0,0,canvas.width, canvas.height);
-                           ctx.fillStyle = patron;
-                           ctx.fillRect(0,0,canvas.width, canvas.height);
-                           //ctx.fillText("HOLA",15,150);
-                        }
-                        //Inicio
-                        bola.src = "img/bola.jpeg";
-                        bola.onload = function(e)
+                        var imagen = new Image();
+                        //
+                        function procesaImagen()
                         {
-                            muestraPatron("repeat");
+                            ctx.drawImage(imagen,10,10);
+                        }
+                        //
+                        imagen.src = "img/grito.jpg";
+                        imagen.onload = function(e)
+                        {
+                            procesaImagen();
                         }
 
                         
