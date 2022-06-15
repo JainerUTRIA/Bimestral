@@ -2,58 +2,47 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Canvas Básico</title>
+        <title>Canvas básico</title>
         <style>
             #miCanvas
             {
-                border:dotted 3px yellow;
+                border: dotted 3px yellow;
                 background: green;
             }
         </style>
         <script>
             window.onload = function()
-        {
+            {
                 var canvas = document.getElementById("miCanvas");
-                if(canvas && canvas.getContext)
-                {
+                if(canvas && canvas.getContext){
                     var ctx = canvas.getContext("2d");
                     if(ctx)
                     {
-                        //
-                        ctx.font = "3em Verdana";
-                        ctx.lineWidth = 1.0;
-                        ctx.fillStyle = "blue";
-                        ctx.strokeStyle = "yellow";
-                        //
-                        ctx.shadowColor = "black";
-                        ctx.shadowoffsetX = 5;
-                        ctx.shadowoffsetY = 5;
-                        ctx.shadowBlur = 10;
-                        //
-                        ctx.fillText ( "CANVAS",35,150);
-                        ctx.strokeText ( "CANVAS",35,150);
-                        ctx.fillRect (200,200,150,50);
-                        //
-                    }
-                        
-                    
-
-
-
-
-                    }
-                    else
-                    {
-                        alert("Error al crear el contexto");
-                    }
+                        canvas.onmousedown = function(e){
+                        var posCanvas = canvas.getBoundingClientRect();
+                        var x = e.clientX - posCanvas.left;
+                        var y = e.clientY - posCanvas.top;
+                        alert("izq "+posCanvas.left+"\n"+
+                         "der "+posCanvas.right+"\n"+
+                         "top "+posCanvas.top+"\n"+
+                         "bot "+posCanvas.bottom+"\n"+
+                         "width "+posCanvas.width+"\n"+
+                         "height "+posCanvas.height+"\n"+
+                         "width "+canvas.width+"\n"+
+                         "height "+canvas.height+"\n"+
+                         "x "+x+"\n"+
+                         "y "+y+"\n"+
+                         "xx "+e.clientX+"\n"+
+                         "yy "+e.clientY
+                         );   
+                        }        
+                    }                            
                 }
-            
+            }
         </script>
     </head>
     <body>
-        <h1>Conceptos básicos de CANVAS</h1>
-        <canvas id="miCanvas" width="500px" height="300px">
-        Tu navegador no soporta CANVAS
-    </canvas>
+        <h1>conceptos básicos de Canvas</h1>
+        <canvas id="miCanvas" width="500px" height="300px">Tu navegador no soporta canvas</canvas>
     </body>
-</html> 
+</html>
