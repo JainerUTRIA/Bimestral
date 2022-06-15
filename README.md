@@ -30,3 +30,5 @@
 
 
 ![](img/cap11.png)
+
+![](img/cap%2012.png)
