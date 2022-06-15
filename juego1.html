@@ -20,19 +20,28 @@
                     if(ctx)
                     {
                         var imagen = new Image();
-                        //
-                        function procesaImagen()
-                        {
-                            ctx.drawImage(imagen,10,10);
+                    function procesaImagen(){
+                        ctx.drawImage(imagen,10,10);
+                        var w = imagen.width;
+                        var h = imagen.height;
+                        var imagenData = ctx.getImageData(10,10,w,h);
+                        var data = imagenData.data;
+                        /*Escala de grises*/
+                        for(var i=0; i<data.length; i+=4){
+                            var gris = (data[i]+data[i+1]+data[i+2])/3
+                            data[i] = gris;    //rojo
+                            data[i+1] = gris;  //Verde
+                            data[i+2] = gris;  //Azul
                         }
-                        //
-                        imagen.src = "img/grito.jpg";
-                        imagen.onload = function(e)
-                        {
-                            procesaImagen();
-                        }
-
+                        ctx.putImageData(imagenData, 250,10);
+                    }
+                    //
+                    imagen.src = "img/grito.jpg";
+                    imagen.onload = function(e){
+                        procesaImagen()
+                    }
                         
+                    }
 
 
 
@@ -43,7 +52,7 @@
                         alert("Error al crear el contexto");
                     }
                 }
-            }
+            
         </script>
     </head>
     <body>
