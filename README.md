@@ -44,3 +44,5 @@
 ![](img/basico.png)
 
 ![](img/principiosanim.png)
+
+![](img/borrarydibujar.png)
