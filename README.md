@@ -46,3 +46,5 @@
 ![](img/principiosanim.png)
 
 ![](img/borrarydibujar.png)
+
+![](img/colisiones.png)
