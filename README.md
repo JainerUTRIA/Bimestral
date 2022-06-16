@@ -52,3 +52,5 @@
 ![](img/Captura%20de%20pantalla%20de%202022-06-15%2018-30-44.png)
 
 ![](img/ahorcado.png)
+
+![](img/naves.png)
